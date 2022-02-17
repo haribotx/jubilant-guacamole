@@ -4,8 +4,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/gh/tanaikech/HtmlFormObjectParserForGoogleAppsScript_js@master/htmlFormObjectParserForGoogleAppsScript_js.min.js"></script>
 </head>
 <body>
-  <script type="text/javascript" src="https://form.jotform.com/jsform/220444225657050"></script>
+  
+<form>
+  <input type="file" name="file" />
+  <input
+    type="button"
+    value="ok"
+    onclick="ParseFormObjectForGAS(this.parentNode).then(obj => google.script.run.upload(obj))"
+  />
+</form>>
 </body>
 </html>
